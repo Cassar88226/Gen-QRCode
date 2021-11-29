@@ -56,11 +56,11 @@ def encode(url, logo_path, qr_path=None):
     QRcode.make()
 
     # taking color name from user
-    fill_color='black'
-    back_color="white"
+    # fill_color='black'
+    # back_color="white"
 
     # adding color to QR code
-    QRimg = QRcode.make_image(fill_color=fill_color, back_color=back_color).convert('RGB')
+    QRimg = QRcode.make_image()
 
     # If logo-path is not None
     # Embed the logo image in QR
@@ -103,7 +103,7 @@ def decode(file_path):
 
 
 if __name__ == "__main__":    
-    qr_path = 'QR Code+3.png'
+    qr_path = 'QR Code.png'
     
     encode(url, logo_path, qr_path)
     
